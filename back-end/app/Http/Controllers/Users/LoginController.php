@@ -51,6 +51,7 @@ class LoginController extends Controller
         if(isset($request->_token) && isset($request->login)){
             if($data = $this->login->getLogin($request->email)){
                 if(password_verify($request->password, $data->password)){
+                    Session::put('login_hwgroup', true);
                     Session::put('name', $data->name);
                     Session::put('email', $data->email);
                     return redirect(route("users.dashboard"));
@@ -63,5 +64,10 @@ class LoginController extends Controller
         }else{
             return redirect(route("/"))->with(['alertclass' => "warning", 'message' => "Upss. Ada kesalahan."]);
         }
+    }
+
+    function logout(){
+        Session::flush();
+        return redirect(route('/'));
     }
 }

@@ -13,19 +13,19 @@
                                 @csrf
                               <div class="form-group">
                                   <label for="exampleInputName1">Nama Lengkap</label>
-                                  <input type="text" class="form-control mb-0" name="name" id="exampleInputName1" placeholder="Nama Lengkap">
+                                  <input type="text" class="form-control mb-0" name="name" id="exampleInputName1" placeholder="Nama Lengkap" @required(true)>
                               </div>
                               <div class="form-group">
                                   <label for="exampleInputEmail2">Alamat Email</label>
-                                  <input type="email" class="form-control mb-0" name="email" id="exampleInputEmail2" placeholder="Alamat Email">
+                                  <input type="email" class="form-control mb-0" name="email" id="exampleInputEmail2" placeholder="Alamat Email" @required(true)>
                               </div>
                               <div class="form-group">
                                   <label for="exampleInputPassword1">Kata Sandi</label>
-                                  <input type="password" class="form-control mb-0" name="password" id="exampleInputPassword1" placeholder="Kata Sandi">
+                                  <input type="password" class="form-control mb-0" name="password" id="exampleInputPassword1" placeholder="Kata Sandi" @required(true)>
                               </div>
                               <div class="form-group">
                                   <label for="exampleInputPassword1">Konfirmasi Kata Sandi</label>
-                                  <input type="password" class="form-control mb-0" name="password_conf" id="exampleInputPassword1" placeholder="Konfirmasi Kata Sandi">
+                                  <input type="password" class="form-control mb-0" name="password_conf" id="exampleInputPassword1" placeholder="Konfirmasi Kata Sandi" @required(true)>
                               </div>
                               <div class="sign-info">
                                   <button type="submit" name="register" value="true" class="btn btn-primary mb-2">Daftar</button>
@@ -60,12 +60,12 @@
                                 @csrf
                               <div class="form-group">
                                   <label for="exampleInputEmail2">Alamat Email</label>
-                                  <input type="email" name="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email">
+                                  <input type="email" name="email" class="form-control mb-0" id="exampleInputEmail2" placeholder="Enter email" @required(true)>
                               </div>
                               <div class="form-group">
                                   <label for="exampleInputPassword2">Kata Sandi</label>
                                   <a href="#" class="float-right">Lupa kata sandi?</a>
-                                  <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password">
+                                  <input type="password" name="password" class="form-control mb-0" id="exampleInputPassword2" placeholder="Password" @required(true)>
                               </div>
                               <div class="d-inline-block w-100">
                                   <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
@@ -84,12 +84,12 @@
                 <div class="overlay-container">
                     <div class="overlay">
                         <div class="overlay-panel overlay-left">
-                            <a class="sign-in-logo mb-5" href="#"><img src="images/logo-full.png" class="img-fluid" alt="logo"></a>
+                            <h1 class="p-4 text-white">HW Group</h1>
                             <p>Untuk Tetap terhubung dengan kami, silakan login dengan informasi pribadi Anda.</p>
                             <button class="btn iq-border-primary mt-2" id="signIn">Masuk</button>
                         </div>
                         <div class="overlay-panel overlay-right">
-                            <a class="sign-in-logo mb-5" href="#"><img src="images/logo-full.png" class="img-fluid" alt="logo"></a>
+                            <h1 class="p-4 text-white">HW Group</h1>
                             <p>Masukkan detail pribadi Anda dan mulailah perjalanan bersama kami!</p>
                             <button class="btn iq-border-primary mt-2" id="signUp">Daftar</button>
                         </div>

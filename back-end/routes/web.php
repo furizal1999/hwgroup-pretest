@@ -21,9 +21,10 @@ Route::controller(App\Http\Controllers\Users\LoginController::class)->group(func
     Route::get('/', 'index')->name("/");
     Route::post('users/register', 'register')->name("users.register");
     Route::post('users/login', 'login')->name("users.login");
+    Route::get('users/logout', 'logout')->name("users.logout");
 });
 
-Route::controller(App\Http\Controllers\Users\DashboardController::class)->group(function (){
+Route::controller(App\Http\Controllers\Users\DashboardController::class)->middleware("checkuseraccess")->group(function (){
     Route::get('dashboard', 'index')->name("users.dashboard");
 });
 
